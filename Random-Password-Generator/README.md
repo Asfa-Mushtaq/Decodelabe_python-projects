@@ -1,15 +1,19 @@
-# 🔐 Random Password Generator
+# 🔐 Password Generator
 
-A simple Python project that generates a random password based on the length provided by the user. This project helps beginners learn how to use Python's built-in `random` and `string` modules to create secure passwords.
+A beginner-friendly Python application that generates secure random passwords based on the user's preferred length. The program uses Python's built-in `random` and `string` modules to create strong passwords with letters, numbers, and optional special characters.
 
 ---
 
 ## 📌 Features
 
-* Generate random passwords
-* User chooses the password length
-* Uses letters and numbers
-* Simple and beginner-friendly
+* Generate secure random passwords
+* User selects the password length
+* Option to include special characters
+* Uses uppercase and lowercase letters
+* Includes numbers in the password
+* Password strength indicator (Weak, Medium, Strong)
+* Validates user input
+* Simple and user-friendly interface
 
 ---
 
@@ -22,7 +26,7 @@ A simple Python project that generates a random password based on the length pro
 ## 📂 Project Structure
 
 ```text
-Random-Password-Generator/
+Password-Generator/
 ├── password_generator.py
 └── README.md
 ```
@@ -35,20 +39,25 @@ Random-Password-Generator/
 2. Open the project in VS Code or any Python IDE.
 3. Run the `password_generator.py` file.
 4. Enter the desired password length.
-5. The program will generate and display a random password.
+5. Choose whether to include special characters.
+6. View the generated password and its strength.
 
 ---
 
 ## 📷 Sample Output
 
 ```text
-==============================
- Random Password Generator
-==============================
+===================================
+   Random Password Generator
+===================================
 
-Enter password length: 8
+Enter password length (minimum 6): 12
+Include special characters? (yes/no): yes
 
-Generated Password: A7kP9mQ2
+========== Result ==========
+Generated Password: A#8kP!mQ2@xL
+Password Strength: Strong 💪
+============================
 ```
 
 ---
@@ -57,7 +66,9 @@ Generated Password: A7kP9mQ2
 
 * Variables
 * User Input
-* For Loop
+* Conditional Statements
+* Loops
+* Error Handling (`try` / `except`)
 * Random Module
 * String Module
 * String Concatenation
@@ -66,7 +77,7 @@ Generated Password: A7kP9mQ2
 
 ## 🎯 Learning Outcome
 
-This project demonstrates how to use Python's built-in libraries to generate random data and create secure passwords through string manipulation.
+This project demonstrates how to use Python's built-in libraries to generate secure random passwords, validate user input, work with strings, and build a practical security-focused application.
 
 ---
 
