@@ -1,20 +1,48 @@
-print("===================================")
-print("      Expense Tracker")
-print("===================================")
+# ==============================
+#   RANDOM PASSWORD GENERATOR
+# ==============================
 
-total = 0
+import random
+import string
+
+print("===================================")
+print("   Random Password Generator")
+print("===================================")
 
 while True:
-    expense = input("Enter expense amount (or type 'done' to finish): ")
+    try:
+        length = int(input("Enter password length (minimum 6): "))
 
-    if expense.lower() == "done":
+        if length < 6:
+            print("Password must be at least 6 characters long!")
+            continue
         break
 
-    try:
-        total += float(expense)
     except ValueError:
         print("Please enter a valid number!")
 
+# Ask user whether to include special characters
+choice = input("Include special characters? (yes/no): ").lower()
+
+characters = string.ascii_letters + string.digits
+
+if choice == "yes":
+    characters += string.punctuation
+
+password = ""
+
+for i in range(length):
+    password += random.choice(characters)
+
 print("\n========== Result ==========")
-print(f"Total Spent: Rs. {total:.2f}")
+print("Generated Password:", password)
+
+# Password Strength
+if length >= 12:
+    print("Password Strength: Strong")
+elif length >= 8:
+    print("Password Strength: Medium")
+else:
+    print("Password Strength: Weak")
+
 print("============================")
